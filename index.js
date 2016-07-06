@@ -1,10 +1,8 @@
 'use strict'
 
-import amqp from 'amqplib'
+module.exports = class AMQPExchange {
 
-export default class AMQPExchange {
-
-  constructor({ channel, name }) {
+  constructor(channel, name) {
     this._channel = channel
     this._name = name
     const _this = this
