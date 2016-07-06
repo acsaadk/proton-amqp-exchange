@@ -1,0 +1,38 @@
+{
+  "name": "proton-amqp-exchange",
+  "version": "1.0.0",
+  "description": "Base class to handle <<AMQP exchanges>> with proton-quark-amqp",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "./node_modules/mocha/bin/mocha -R spec ./test/*.js"
+  },
+  "author": "Antonio Saad",
+  "license": "ISC",
+  "dependencies": {
+    "amqplib": "^0.4.2",
+    "co": "^4.6.0"
+  },
+  "devDependencies": {
+    "mocha": "*",
+    "should": ">= 0.0.1"
+  },
+  "directories": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/acsaadk/proton-amqp-exchange"
+  },
+  "keywords": [
+    "RabbitMQ",
+    "AMQP",
+    "Exchange",
+    "Proton",
+    "Microframework"
+  ],
+  "bugs": {
+    "url": "https://github.com/acsaadk/proton-amqp-exchange/issues"
+  },
+  "homepage": "https://github.com/acsaadk/proton-amqp-exchange/blob/master/README.md"
+}
