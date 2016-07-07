@@ -47,13 +47,14 @@ module.exports = class AMQPExchange {
 
 /**
   * @method bindings
-  * @description This method can be overriden to specify bindings to another exchanges
+  * @description This method can be overriden to specify bindings to another exchanges or queues
   * @returns Array of JSON objects with the following structure:
   * [
   *   {
   *      routingKey: "routing key pattern"
   *      source: "exchange name which wants to join",
-  *      args: { OPTIONAL }
+  *      args: { OPTIONAL },
+  *      to: ['queue' | 'exchange']
   *   },
   *   ...
   * ]
@@ -65,12 +66,12 @@ module.exports = class AMQPExchange {
 
 /**
   * @method options
-  * @description This method can be overriden to specify a JSON with options for creating the channel.
+  * @description This method can be overriden to specify a JSON with options for creating the exchange.
   * For more info, check: http://www.squaremobius.net/amqp.node/channel_api.html#channel_assertExchange
   * @returns undefined by default, otherwise it must return a JSON
   * @author Antonio Saad
 */
-  get options() {
+  static get options() {
     return undefined
   }
 
