@@ -13,6 +13,7 @@ describe('proton-amqp-exchange class test', () => {
     const ch = yield conn.createChannel()
     yield ch.assertExchange('AMQPExchangeTest', AMQPExchangeTest.type, AMQPExchangeTest.options)
     const exchange = new AMQPExchangeTest(ch, 'AMQPExchangeTest')
+    exchange.publish(new Buffer('This is a test message'))
     yield exchange.destroy()
     yield exchange.closeChannel()
     yield conn.close()

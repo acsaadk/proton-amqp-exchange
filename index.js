@@ -172,14 +172,14 @@ module.exports = class AMQPExchange {
 /**
   * @method publish
   * @description Publish a message
-  * @param routingKey String Pattern to route the message to the appropiate queues
   * @param content Buffer Message to publish
+  * @param routingKey String Pattern to route the message to the appropiate queues
   * @param opts JSON special parameters.
   For more info, check: http://www.squaremobius.net/amqp.node/channel_api.html#channel_publish
   * @returns Promise
   * @author Antonio Saad
 */
-  publish(routingKey, content, opts) {
+  publish(content, routingKey, opts) {
     return this._channel.publish(this._name, routingKey, content, opts)
   }
 
