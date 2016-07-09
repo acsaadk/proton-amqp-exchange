@@ -13,7 +13,7 @@ module.exports = class AMQPExchangeTest extends Exchange {
     return process.env.CLOUDAMQP_URL
   }
 
-  get type() {
+  static get type() {
     return Exchange.FANOUT
   }
 
