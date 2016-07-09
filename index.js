@@ -35,6 +35,17 @@ module.exports = class AMQPExchange {
   }
 
 /**
+  * @method customName
+  * @description This method can be overriden to set a specific name for the exchange.
+  * A tipical use case could be to use the object with an existing exchange.
+  * @returns undefined by default, otherwise it must return a String with the desired name.
+  * if the returned value is an empty string or any falsey value, it will use the class's name
+*/
+  static get customName() {
+    return undefined
+  }
+
+/**
   * @method type
   * @description This method must be overriden to specify a valid type of exchange (direct, fanout, topic)
   * @throws Error by default if it's not implemented
