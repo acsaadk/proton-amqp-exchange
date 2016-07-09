@@ -41,8 +41,8 @@ module.exports = class AMQPExchange {
   * @returns String specifying a valid type of exchange
   * @author Antonio Saad
 */
-  get type() {
-    throw new Error('You must implement the `get type()` getter method, returning a valid type of exchange')
+  static get type() {
+    throw new Error('You must implement the `static get type()` getter method, returning a valid type of exchange')
   }
 
 /**
