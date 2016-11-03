@@ -1,6 +1,6 @@
 {
   "name": "proton-amqp-exchange",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Base class to handle AMQP exchange component with proton-quark-amqp",
   "main": "index.js",
   "scripts": {
