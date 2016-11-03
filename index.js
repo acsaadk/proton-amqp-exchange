@@ -63,7 +63,8 @@ module.exports = class AMQPExchange {
   * [
   *   {
   *      routingKey: "routing key pattern"
-  *      source: "exchange name which wants to join",
+  *      source: "exchange name which wants to listen",
+  *      destination: "exchange or queue name wich will receive a published message, this field is linked with the field `to` to specify if the name is related wether an exchange or queue"
   *      args: { OPTIONAL },
   *      to: ['queue' | 'exchange']
   *   },
